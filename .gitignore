@@ -61,3 +61,6 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+/SimplifyInn/nbproject/private/
+/SimplifyInn/build/
+/SimplifyInn/dist/
