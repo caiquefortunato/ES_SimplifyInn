@@ -1,3 +1,6 @@
+/*
+    A classe possui as tabelas, criando-as
+*/
 package dataBase;
 
 import dataBase.conexaoMySQL;

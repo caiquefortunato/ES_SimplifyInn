@@ -1,3 +1,6 @@
+/*
+    Todas as operações de inserção no banco
+*/
 package dataBase.operations;
 
 import dataBase.conexaoMySQL;

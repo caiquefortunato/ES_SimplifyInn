@@ -1,3 +1,7 @@
+/*
+    A classe é do tipo main, cria o Banco. 
+    Obs: Executar somente na primeira vez.
+*/
 package dataBase;
 
 import java.sql.Connection;

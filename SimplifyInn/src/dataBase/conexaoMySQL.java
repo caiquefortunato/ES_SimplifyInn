@@ -1,3 +1,6 @@
+/*
+    A classe faz conexão com o Banco de dados
+*/
 package dataBase;
 
 import java.sql.Connection;

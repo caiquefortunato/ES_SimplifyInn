@@ -1,3 +1,6 @@
+/*
+    A classe possui as ações da tela de cadastro
+*/
 package acoes;
 
 import dataBase.operations.insercaoBanco;

@@ -1,3 +1,7 @@
+/*
+    Caso necessário, a classe deleta os registros.
+    Na implementação apaga tudo.
+*/
 package dataBase;
 
 import dataBase.conexaoMySQL;
