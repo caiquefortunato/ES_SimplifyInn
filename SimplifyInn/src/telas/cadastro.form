@@ -365,24 +365,24 @@
                       </Group>
                   </Group>
                   <Group type="103" groupAlignment="1" attributes="0">
-                      <Component id="campo_nome" max="32767" attributes="0"/>
+                      <Component id="nome" max="32767" attributes="0"/>
                       <Group type="102" alignment="1" attributes="0">
-                          <Component id="campo_username" max="32767" attributes="0"/>
+                          <Component id="username" max="32767" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="botao_disponibilidade" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="1" attributes="0">
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
                               <Group type="102" attributes="0">
-                                  <Component id="campo_senha1" min="-2" pref="165" max="-2" attributes="0"/>
+                                  <Component id="senha" min="-2" pref="165" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="jLabel16" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="jLabel17" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="campo_senha2" min="-2" pref="180" max="-2" attributes="0"/>
+                                  <Component id="senhaConfirmacao" min="-2" pref="180" max="-2" attributes="0"/>
                               </Group>
-                              <Component id="campo_email" max="32767" attributes="0"/>
+                              <Component id="email" max="32767" attributes="0"/>
                           </Group>
                           <EmptySpace min="0" pref="5" max="32767" attributes="0"/>
                       </Group>
@@ -397,13 +397,13 @@
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabel8" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="campo_nome" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="nome" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jLabel10" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabel9" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="campo_username" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="username" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="botao_disponibilidade" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jLabel11" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
@@ -411,16 +411,16 @@
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabel12" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jLabel13" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="campo_email" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="email" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabel14" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jLabel15" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="campo_senha1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="senha" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jLabel16" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jLabel17" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="campo_senha2" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="senhaConfirmacao" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="32767" attributes="0"/>
               </Group>
@@ -433,14 +433,14 @@
             <Property name="text" type="java.lang.String" value="Nome completo:"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="campo_nome">
+        <Component class="javax.swing.JTextField" name="nome">
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel9">
           <Properties>
             <Property name="text" type="java.lang.String" value="Nome de usu&#xe1;rio:"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="campo_username">
+        <Component class="javax.swing.JTextField" name="username">
         </Component>
         <Component class="javax.swing.JButton" name="botao_disponibilidade">
           <Properties>
@@ -492,7 +492,7 @@
             <Property name="text" type="java.lang.String" value="*"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="campo_email">
+        <Component class="javax.swing.JTextField" name="email">
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel14">
           <Properties>
@@ -510,7 +510,7 @@
             <Property name="text" type="java.lang.String" value="*"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JPasswordField" name="campo_senha1">
+        <Component class="javax.swing.JPasswordField" name="senha">
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel16">
           <Properties>
@@ -528,7 +528,7 @@
             <Property name="text" type="java.lang.String" value="*"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JPasswordField" name="campo_senha2">
+        <Component class="javax.swing.JPasswordField" name="senhaConfirmacao">
         </Component>
       </SubComponents>
     </Container>
@@ -550,7 +550,7 @@
                       <Group type="102" attributes="0">
                           <Component id="jLabel18" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Component id="jComboBox1" min="-2" max="-2" attributes="0"/>
+                          <Component id="cargo" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <Component id="jLabel21" alignment="0" min="-2" max="-2" attributes="0"/>
                   </Group>
@@ -564,7 +564,7 @@
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabel18" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jComboBox1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="cargo" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Component id="jLabel21" min="-2" max="-2" attributes="0"/>
@@ -579,7 +579,7 @@
             <Property name="text" type="java.lang.String" value="Cargo do funcion&#xe1;rio:"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JComboBox" name="jComboBox1">
+        <Component class="javax.swing.JComboBox" name="cargo">
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
               <StringArray count="4">

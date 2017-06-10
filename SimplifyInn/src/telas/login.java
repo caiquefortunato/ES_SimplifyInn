@@ -1,14 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package telas;
 
-/**
- *
- * @author caiqu
- */
+import acoes.telaLogin;
+import javax.swing.JOptionPane;
+
 public class login extends javax.swing.JFrame {
 
     /**
@@ -353,10 +347,37 @@ public class login extends javax.swing.JFrame {
     }//GEN-LAST:event_recuperarSenhaActionPerformed
 
     private void botaoAcessarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoAcessarActionPerformed
-        java.awt.EventQueue.invokeLater(() -> {
-            new menu().setVisible(true);
-        });
-        this.dispose();
+        telaLogin telaLogin = new telaLogin();
+        telaLogin.VerificaDisponibilidade(campo_usuario.getText());
+            
+        if(campo_usuario.getText().isEmpty() || campo_senha.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(null, "Por favor, preencha todos os campos");
+        
+        // Se ambos os campos forem digitados:
+        } else {
+            // O login existe?
+            if (!telaLogin.getVerificaExistencia()) {     
+                JOptionPane.showMessageDialog(null, "Login inexistente, disponível para cadastro");
+            } else { // A senha corresponde ao login digitado?
+                telaLogin.VerificaSenha(campo_usuario.getText(), campo_senha.getText());
+                
+                if(telaLogin.getVerificaSenha()) {
+                    // Salvo o username
+                    telaLogin.definirUsuario(campo_usuario.getText());
+                    telaLogin.preencherDados();
+                    // Passa para a tela de perfil
+                    java.awt.EventQueue.invokeLater(() -> {
+                        new TelaInicial().setVisible(true);
+                    });
+                    this.dispose();
+                }
+                else {
+                    JOptionPane.showMessageDialog(null, "Senha incorreta!");
+                }
+                
+            }
+
+        }
     }//GEN-LAST:event_botaoAcessarActionPerformed
 
     private void botaoVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoVoltarActionPerformed
