@@ -353,7 +353,10 @@ public class login extends javax.swing.JFrame {
     }//GEN-LAST:event_recuperarSenhaActionPerformed
 
     private void botaoAcessarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoAcessarActionPerformed
-        // TODO add your handling code here:
+        java.awt.EventQueue.invokeLater(() -> {
+            new menu().setVisible(true);
+        });
+        this.dispose();
     }//GEN-LAST:event_botaoAcessarActionPerformed
 
     private void botaoVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoVoltarActionPerformed
