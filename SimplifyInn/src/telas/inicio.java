@@ -36,7 +36,7 @@ public class inicio extends javax.swing.JFrame {
         fazerCadastro = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Início");
+        setTitle("Inï¿½cio");
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
         jPanel1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
@@ -148,6 +148,7 @@ public class inicio extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_acessoLoginActionPerformed
 
+    //Aprimoramento
     private void fazerCadastroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fazerCadastroActionPerformed
         java.awt.EventQueue.invokeLater(() -> {
             new cadastro().setVisible(true);
