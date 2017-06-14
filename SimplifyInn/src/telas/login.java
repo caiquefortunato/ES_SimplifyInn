@@ -50,9 +50,9 @@ public class login extends javax.swing.JFrame {
         jPanel3.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
         labelUsuario.setFont(new java.awt.Font("MS Reference Sans Serif", 1, 12)); // NOI18N
-        labelUsuario.setText("Digite seu nome de usuário:");
+        labelUsuario.setText("Digite seu nome de usuï¿½rio:");
 
-        username.setToolTipText("Digite seu nome de usuário aqui");
+        username.setToolTipText("Digite seu nome de usuï¿½rio aqui");
 
         labelSenha.setFont(new java.awt.Font("MS Reference Sans Serif", 1, 12)); // NOI18N
         labelSenha.setText("Digite sua senha:");
@@ -69,7 +69,7 @@ public class login extends javax.swing.JFrame {
         });
 
         fazerCadastro.setText("Cadastrar");
-        fazerCadastro.setToolTipText("Se você ainda não se cadastrou, clique aqui");
+        fazerCadastro.setToolTipText("Se vocï¿½ ainda nï¿½o se cadastrou, clique aqui");
         fazerCadastro.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 fazerCadastroActionPerformed(evt);
@@ -77,7 +77,7 @@ public class login extends javax.swing.JFrame {
         });
 
         recuperarSenha.setText("Esqueci minha senha");
-        recuperarSenha.setToolTipText("Se você esqueceu sua senha, clique aqui para recuperá-la através do seu e-mail");
+        recuperarSenha.setToolTipText("Se vocï¿½ esqueceu sua senha, clique aqui para recuperï¿½-la atravï¿½s do seu e-mail");
         recuperarSenha.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 recuperarSenhaActionPerformed(evt);
@@ -184,7 +184,7 @@ public class login extends javax.swing.JFrame {
         jLabel5.setText("Login");
 
         jLabel6.setFont(new java.awt.Font("Lucida Console", 0, 14)); // NOI18N
-        jLabel6.setText("Digite seu nome de usuário");
+        jLabel6.setText("Digite seu nome de usuï¿½rio");
 
         jLabel7.setFont(new java.awt.Font("Lucida Console", 0, 14)); // NOI18N
         jLabel7.setText("Digite sua senha");
@@ -272,7 +272,7 @@ public class login extends javax.swing.JFrame {
         );
 
         botaoCadastro.setFont(new java.awt.Font("Lucida Console", 0, 14)); // NOI18N
-        botaoCadastro.setText("Cadastro de usuários");
+        botaoCadastro.setText("Cadastro de usuï¿½rios");
         botaoCadastro.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botaoCadastroActionPerformed(evt);
@@ -357,7 +357,7 @@ public class login extends javax.swing.JFrame {
         } else {
             // O login existe?
             if (!telaLogin.getVerificaExistencia()) {     
-                JOptionPane.showMessageDialog(null, "Login inexistente, disponível para cadastro");
+                JOptionPane.showMessageDialog(null, "Login inexistente, disponï¿½vel para cadastro");
             } else { // A senha corresponde ao login digitado?
                 telaLogin.VerificaSenha(campo_usuario.getText(), campo_senha.getText());
                 

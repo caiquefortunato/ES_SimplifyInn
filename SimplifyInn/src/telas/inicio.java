@@ -148,7 +148,6 @@ public class inicio extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_acessoLoginActionPerformed
 
-    //Aprimoramento
     private void fazerCadastroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fazerCadastroActionPerformed
         java.awt.EventQueue.invokeLater(() -> {
             new cadastro().setVisible(true);
