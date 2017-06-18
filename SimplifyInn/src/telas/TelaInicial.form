@@ -258,9 +258,6 @@
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="cc" red="cc" type="rgb"/>
             </Property>
-            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\caiqu\Desktop\check-out.png"/>
-            </Property>
             <Property name="text" type="java.lang.String" value="Check-out"/>
           </Properties>
         </Component>
@@ -269,9 +266,6 @@
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="cc" red="cc" type="rgb"/>
             </Property>
-            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\caiqu\Desktop\bed.png"/>
-            </Property>
             <Property name="text" type="java.lang.String" value="Acomoda&#xe7;&#xf5;es"/>
           </Properties>
         </Component>
@@ -279,9 +273,6 @@
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="cc" red="cc" type="rgb"/>
-            </Property>
-            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\caiqu\Desktop\reserved.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="CRS"/>
           </Properties>
@@ -294,19 +285,16 @@
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="cc" red="cc" type="rgb"/>
             </Property>
-            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\caiqu\Desktop\room-service.png"/>
-            </Property>
             <Property name="text" type="java.lang.String" value="Servi&#xe7;o de quarto"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botao_servicoActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="botao_nf">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="cc" red="cc" type="rgb"/>
-            </Property>
-            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\caiqu\Desktop\invoice.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="NF-e"/>
           </Properties>

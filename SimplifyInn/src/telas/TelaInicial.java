@@ -83,15 +83,12 @@ public class TelaInicial extends javax.swing.JFrame {
         });
 
         botao_checkout.setBackground(new java.awt.Color(204, 204, 255));
-        botao_checkout.setIcon(new javax.swing.ImageIcon("C:\\Users\\caiqu\\Desktop\\check-out.png")); // NOI18N
         botao_checkout.setText("Check-out");
 
         botao_acomodacoes.setBackground(new java.awt.Color(204, 204, 255));
-        botao_acomodacoes.setIcon(new javax.swing.ImageIcon("C:\\Users\\caiqu\\Desktop\\bed.png")); // NOI18N
         botao_acomodacoes.setText("Acomodações");
 
         botao_crs.setBackground(new java.awt.Color(204, 204, 255));
-        botao_crs.setIcon(new javax.swing.ImageIcon("C:\\Users\\caiqu\\Desktop\\reserved.png")); // NOI18N
         botao_crs.setText("CRS");
         botao_crs.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -100,11 +97,14 @@ public class TelaInicial extends javax.swing.JFrame {
         });
 
         botao_servico.setBackground(new java.awt.Color(204, 204, 255));
-        botao_servico.setIcon(new javax.swing.ImageIcon("C:\\Users\\caiqu\\Desktop\\room-service.png")); // NOI18N
         botao_servico.setText("Serviço de quarto");
+        botao_servico.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botao_servicoActionPerformed(evt);
+            }
+        });
 
         botao_nf.setBackground(new java.awt.Color(204, 204, 255));
-        botao_nf.setIcon(new javax.swing.ImageIcon("C:\\Users\\caiqu\\Desktop\\invoice.png")); // NOI18N
         botao_nf.setText("NF-e");
         botao_nf.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -140,7 +140,7 @@ public class TelaInicial extends javax.swing.JFrame {
                     .addComponent(botao_crs, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(50, 50, 50)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(botao_relatorios, javax.swing.GroupLayout.DEFAULT_SIZE, 176, Short.MAX_VALUE)
+                    .addComponent(botao_relatorios, javax.swing.GroupLayout.PREFERRED_SIZE, 176, Short.MAX_VALUE)
                     .addComponent(botao_servico, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
@@ -372,7 +372,10 @@ public class TelaInicial extends javax.swing.JFrame {
     }//GEN-LAST:event_botao_checkinActionPerformed
 
     private void botao_crsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botao_crsActionPerformed
-        // TODO add your handling code here:
+        java.awt.EventQueue.invokeLater(() -> {
+            new TelaReserva().setVisible(true);
+        });
+        this.dispose(); 
     }//GEN-LAST:event_botao_crsActionPerformed
 
     private void botao_maisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botao_maisActionPerformed
@@ -386,6 +389,13 @@ public class TelaInicial extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void botao_servicoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botao_servicoActionPerformed
+        java.awt.EventQueue.invokeLater(() -> {
+            new TelaServiçoQuarto().setVisible(true);
+        });
+        this.dispose(); 
+    }//GEN-LAST:event_botao_servicoActionPerformed
 
     /**
      * @param args the command line arguments
