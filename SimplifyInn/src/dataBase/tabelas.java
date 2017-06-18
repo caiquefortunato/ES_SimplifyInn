@@ -40,6 +40,52 @@ public class tabelas {
         }
     }
     
+        private void criarTabelaReservas() {
+            Statement stmt = null;
+            conexaoMySQL conn = conexaoMySQL.getConexao();
+            Connection conexao = conn.getConexaoMySQL();
+            try {
+                stmt = conexao.createStatement();
+                String sql = "CREATE TABLE RESERVAS " +
+                            "(ID                 CHAR    PRIMARY KEY NOT NULL," +
+                            " NUM                CHAR    NOT NULL, " + 
+                            " NOME               TEXT    NOT NULL, " +
+                            " EMAIL              TEXT    NOT NULL, " +
+                            " TELEFONE           TEXT    NOT NULL, " +
+                            " DATANASC           DATE    NOT NULL, " +
+                            " CHECKIN            DATE    NOT NULL  "  +
+                            " CHECKOUT           DATE    NOT NULL  "  +
+                            " NUMHOSPEDES        CHAR    NOT NULL  " + 
+                            " OBSERVACOES        TEXT    NOT NULL  " +                        
+                            " IDQUARTO           CHAR    FOREIGN KEY NOT NULL, " +
+                            " IDRESERVA          CHAR    NOT NULL )"; 
+                stmt.executeUpdate(sql);
+                stmt.close();
+            } catch (SQLException e) {
+                System.err.println( e.getClass().getName() + ": " + e.getMessage() );
+                System.exit(0);
+        }
+    }
+        
+        private void criarTabelaPedidos() {
+            Statement stmt = null;
+            conexaoMySQL conn = conexaoMySQL.getConexao();
+            Connection conexao = conn.getConexaoMySQL();
+        try {
+            stmt = conexao.createStatement();
+            String sql = "CREATE TABLE PEDIDOS " +
+                        "(ID                 CHAR    PRIMARY KEY NOT NULL," +
+                        " IDQUARTO           CHAR    FOREIGN KEY NOT NULL, " + 
+                        " SERVICO            TEXT    NOT NULL, " +
+                        " OBSERVACAO         TEXT    NOT NULL )"; 
+            stmt.executeUpdate(sql);
+            stmt.close();
+        } catch (SQLException e) {
+            System.err.println( e.getClass().getName() + ": " + e.getMessage() );
+            System.exit(0);
+        }
+    }
+    
 }
 
 
