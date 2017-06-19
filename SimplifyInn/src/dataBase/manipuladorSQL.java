@@ -20,7 +20,7 @@ public class manipuladorSQL {
         System.out.println(conn.statusConection());
         
         // Apaga dados existentes
-        //delete apagar = new delete();
+        delete apagar = new delete();
         
         // Cria tabelas
         tabelas tabelas = new tabelas();

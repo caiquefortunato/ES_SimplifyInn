@@ -48,23 +48,25 @@ public class insercaoBanco {
             conexaoMySQL conn = conexaoMySQL.getConexao();
             Connection c = conn.getConexaoMySQL();
 
-            String sql = "INSERT INTO RESERVAS (ID, NUM, NOME, EMAIL, TELEFONE, DATANASC, CHECKIN, CHECKOUT,"
-                        + " NUMHOSPEDES, OBSERVACOES, IDQUARTO, IDRESERVA) "
-                        + "VALUES (?,?,?,?,?,?,?,?,?,?,?,?);";
+            String sql = "INSERT INTO RESERVAS (ID_RESERVA, ID, NUM, NOME, "
+                    + "EMAIL, TELEFONE, DATANASC, CHECKIN, CHECKOUT, NUMHOSPEDES, "
+                    + "OBSERVACOES, IDQUARTO, IDRESERVA) "
+                        + "VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?);";
 
             try (PreparedStatement stmt = c.prepareStatement(sql)) {
-                stmt.setString(1, String.valueOf(res.getId()));
-                stmt.setString(2, res.getNum());
-                stmt.setString(3, res.getNome());
+                stmt.setString(1, null);
+                stmt.setString(2, res.getIdentificacao());
+                stmt.setInt(3, res.getNumero_identificacao());
                 stmt.setString(4, res.getEmail());
-                stmt.setString(5, res.getTelefone());
-                stmt.setString(6, res.getDatansc());
-                stmt.setString(7, res.getCheckin());
-                stmt.setString(8, res.getCheckout());
-                stmt.setString(9, String.valueOf(res.getNumHospedes()));
-                stmt.setString(10, res.getOBSERVACOES());
-                stmt.setString(11, String.valueOf(res.getIdQuarto()));
-                stmt.setString(12, String.valueOf(res.getIdReserva()));
+                stmt.setString(5, res.getEmail());
+                stmt.setInt(6, res.getTelefone());
+                stmt.setString(7, res.getData_nascimento());
+                stmt.setString(8, res.getData_checkin());
+                stmt.setString(9, res.getData_checkout());
+                stmt.setInt(10, res.getNum_hospedes());
+                stmt.setString(11, res.getObservacoes());
+                stmt.setInt(12, res.getNum_quarto());
+                stmt.setInt(13, res.getCod_reserva());
                 stmt.execute();
             }
 

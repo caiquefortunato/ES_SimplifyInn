@@ -1,201 +1,136 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package entidades;
 
-/**
- *
- * @author Philipe
- */
 public class Reserva {
     
-    private int id;
-    private String num;
+    private String identificacao;
+    private int numero_identificacao;
     private String nome;
     private String email;
-    private String telefone;
-    private String datansc;
-    private String checkin;
-    private String checkout;
-    private int numHospedes;
-    private String OBSERVACOES;
-    private int idQuarto;
-    private int idReserva;
-    
-    private Reserva(){
+    private int telefone;
+    private String data_nascimento; 
+    private String data_checkin;
+    private String data_checkout;
+    private int num_hospedes;
+    private String observacoes;
+    private int num_quarto;
+    private int cod_reserva;
+
+    public Reserva() {
         
     }
 
-    /**
-     * @return the id
-     */
-    public int getId() {
-        return id;
+    public Reserva(String identificacao, int numero_identificacao, String nome, 
+            String email, int telefone, String data_nascimento, 
+            String data_checkin, String data_checkout, int num_hospedes,
+            String observacoes, int num_quarto, int cod_reserva) {
+        this.identificacao = identificacao;
+        this.numero_identificacao = numero_identificacao;
+        this.nome = nome;
+        this.email = email;
+        this.telefone = telefone;
+        this.data_nascimento = data_nascimento;
+        this.data_checkin = data_checkin;
+        this.data_checkout = data_checkout;
+        this.num_hospedes = num_hospedes;
+        this.observacoes = observacoes;
+        this.num_quarto = num_quarto;
+        this.cod_reserva = cod_reserva;
     }
 
-    /**
-     * @param id the id to set
-     */
-    public void setId(int id) {
-        this.id = id;
+    public int getCod_reserva() {
+        return cod_reserva;
     }
 
-    /**
-     * @return the num
-     */
-    public String getNum() {
-        return num;
+    public void setCod_reserva(int cod_reserva) {
+        this.cod_reserva = cod_reserva;
     }
 
-    /**
-     * @param num the num to set
-     */
-    public void setNum(String num) {
-        this.num = num;
+    public String getIdentificacao() {
+        return identificacao;
     }
 
-    /**
-     * @return the nome
-     */
+    public void setIdentificacao(String identificacao) {
+        this.identificacao = identificacao;
+    }
+
+    public int getNumero_identificacao() {
+        return numero_identificacao;
+    }
+
+    public void setNumero_identificacao(int numero_identificacao) {
+        this.numero_identificacao = numero_identificacao;
+    }
+
     public String getNome() {
         return nome;
     }
 
-    /**
-     * @param nome the nome to set
-     */
     public void setNome(String nome) {
         this.nome = nome;
     }
 
-    /**
-     * @return the email
-     */
     public String getEmail() {
         return email;
     }
 
-    /**
-     * @param email the email to set
-     */
     public void setEmail(String email) {
         this.email = email;
     }
 
-    /**
-     * @return the telefone
-     */
-    public String getTelefone() {
+    public int getTelefone() {
         return telefone;
     }
 
-    /**
-     * @param telefone the telefone to set
-     */
-    public void setTelefone(String telefone) {
+    public void setTelefone(int telefone) {
         this.telefone = telefone;
     }
 
-    /**
-     * @return the datansc
-     */
-    public String getDatansc() {
-        return datansc;
+    public String getData_nascimento() {
+        return data_nascimento;
     }
 
-    /**
-     * @param datansc the datansc to set
-     */
-    public void setDatansc(String datansc) {
-        this.datansc = datansc;
+    public void setData_nascimento(String data_nascimento) {
+        this.data_nascimento = data_nascimento;
     }
 
-    /**
-     * @return the checkin
-     */
-    public String getCheckin() {
-        return checkin;
+    public String getData_checkin() {
+        return data_checkin;
     }
 
-    /**
-     * @param checkin the checkin to set
-     */
-    public void setCheckin(String checkin) {
-        this.checkin = checkin;
+    public void setData_checkin(String data_checkin) {
+        this.data_checkin = data_checkin;
     }
 
-    /**
-     * @return the checkout
-     */
-    public String getCheckout() {
-        return checkout;
+    public String getData_checkout() {
+        return data_checkout;
     }
 
-    /**
-     * @param checkout the checkout to set
-     */
-    public void setCheckout(String checkout) {
-        this.checkout = checkout;
+    public void setData_checkout(String data_checkout) {
+        this.data_checkout = data_checkout;
     }
 
-    /**
-     * @return the numHospedes
-     */
-    public int getNumHospedes() {
-        return numHospedes;
+    public int getNum_hospedes() {
+        return num_hospedes;
     }
 
-    /**
-     * @param numHospedes the numHospedes to set
-     */
-    public void setNumHospedes(int numHospedes) {
-        this.numHospedes = numHospedes;
+    public void setNum_hospedes(int num_hospedes) {
+        this.num_hospedes = num_hospedes;
     }
 
-    /**
-     * @return the OBSERVACOES
-     */
-    public String getOBSERVACOES() {
-        return OBSERVACOES;
+    public String getObservacoes() {
+        return observacoes;
     }
 
-    /**
-     * @param OBSERVACOES the OBSERVACOES to set
-     */
-    public void setOBSERVACOES(String OBSERVACOES) {
-        this.OBSERVACOES = OBSERVACOES;
+    public void setObservacoes(String observacoes) {
+        this.observacoes = observacoes;
     }
 
-    /**
-     * @return the idQuarto
-     */
-    public int getIdQuarto() {
-        return idQuarto;
+    public int getNum_quarto() {
+        return num_quarto;
     }
 
-    /**
-     * @param idQuarto the idQuarto to set
-     */
-    public void setIdQuarto(int idQuarto) {
-        this.idQuarto = idQuarto;
+    public void setNum_quarto(int num_quarto) {
+        this.num_quarto = num_quarto;
     }
-
-    /**
-     * @return the idReserva
-     */
-    public int getIdReserva() {
-        return idReserva;
-    }
-
-    /**
-     * @param idReserva the idReserva to set
-     */
-    public void setIdReserva(int idReserva) {
-        this.idReserva = idReserva;
-    }
-    
-
     
 }

@@ -12,9 +12,10 @@ public class tabelas {
     
     // Quando a classe é chamada, cria todas as tabelas de uma vez
     public tabelas() {
-        //criarTabelaUsuario();
-        //criarTabelaReservas();
+        criarTabelaUsuario();
+        criarTabelaReservas();
         criarTabelaPedidos();
+        System.out.println("As tabelas foram criadas na base de dados.");
     }
     
     // Cria a tabela de usuários
@@ -49,18 +50,19 @@ public class tabelas {
             try {
                 stmt = conexao.createStatement();
                 String sql = "CREATE TABLE RESERVAS " +
-                            "(ID                 CHAR    PRIMARY KEY NOT NULL," +
-                            " NUM                CHAR    NOT NULL, " + 
-                            " NOME               TEXT    NOT NULL, " +
-                            " EMAIL              TEXT    NOT NULL, " +
-                            " TELEFONE           TEXT    NOT NULL, " +
-                            " DATANASC           DATE    NOT NULL, " +
-                            " CHECKIN            DATE    NOT NULL  "  +
-                            " CHECKOUT           DATE    NOT NULL  "  +
-                            " NUMHOSPEDES        CHAR    NOT NULL  " + 
-                            " OBSERVACOES        TEXT    NOT NULL  " +                        
-                            " IDQUARTO           CHAR    FOREIGN KEY NOT NULL, " +
-                            " IDRESERVA          CHAR    NOT NULL )"; 
+                            "(ID_RESERVA    INTEGER     NOT NULL PRIMARY KEY AUTOINCREMENT," +
+                            " ID            TEXT        NOT NULL," +
+                            " NUM           INTEGER     NOT NULL, " + 
+                            " NOME          TEXT        NOT NULL, " +
+                            " EMAIL         TEXT        NOT NULL, " +
+                            " TELEFONE      INTEGER     NOT NULL, " +
+                            " DATANASC      DATE        NOT NULL, " +
+                            " CHECKIN       DATE        NOT NULL,  "  +
+                            " CHECKOUT      DATE        NOT NULL,  "  +
+                            " NUMHOSPEDES   INTEGER     NOT NULL,  " + 
+                            " OBSERVACOES   TEXT                ," +                        
+                            " IDQUARTO      INTEGER     NOT NULL, " +
+                            " IDRESERVA     INTEGER     NOT NULL )"; 
                 stmt.executeUpdate(sql);
                 stmt.close();
                 
