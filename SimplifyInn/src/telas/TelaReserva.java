@@ -115,7 +115,7 @@ public class TelaReserva extends javax.swing.JFrame {
         jPanel6.setForeground(new java.awt.Color(204, 204, 255));
 
         botaoVoltar1.setFont(new java.awt.Font("Lucida Console", 0, 14)); // NOI18N
-        botaoVoltar1.setText("Sair");
+        botaoVoltar1.setText("Voltar");
         botaoVoltar1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botaoVoltar1ActionPerformed(evt);
@@ -197,7 +197,7 @@ public class TelaReserva extends javax.swing.JFrame {
                                         .addComponent(jTextField9)
                                         .addGap(39, 39, 39))
                                     .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(18, 22, Short.MAX_VALUE)
+                                .addGap(18, 18, Short.MAX_VALUE)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel13)
                                     .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -205,7 +205,7 @@ public class TelaReserva extends javax.swing.JFrame {
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(jTextField7, javax.swing.GroupLayout.DEFAULT_SIZE, 81, Short.MAX_VALUE)
                                     .addComponent(jTextField4))
-                                .addContainerGap(20, Short.MAX_VALUE))
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)

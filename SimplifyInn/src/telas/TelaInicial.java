@@ -392,7 +392,7 @@ public class TelaInicial extends javax.swing.JFrame {
 
     private void botao_servicoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botao_servicoActionPerformed
         java.awt.EventQueue.invokeLater(() -> {
-            new TelaServiçoQuarto().setVisible(true);
+            new TelaServicoQuarto().setVisible(true);
         });
         this.dispose(); 
     }//GEN-LAST:event_botao_servicoActionPerformed

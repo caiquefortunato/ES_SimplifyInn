@@ -12,7 +12,9 @@ public class tabelas {
     
     // Quando a classe é chamada, cria todas as tabelas de uma vez
     public tabelas() {
-        criarTabelaUsuario();
+        //criarTabelaUsuario();
+        //criarTabelaReservas();
+        criarTabelaPedidos();
     }
     
     // Cria a tabela de usuários
@@ -40,7 +42,7 @@ public class tabelas {
         }
     }
     
-        private void criarTabelaReservas() {
+    private void criarTabelaReservas() {
             Statement stmt = null;
             conexaoMySQL conn = conexaoMySQL.getConexao();
             Connection conexao = conn.getConexaoMySQL();
@@ -61,31 +63,35 @@ public class tabelas {
                             " IDRESERVA          CHAR    NOT NULL )"; 
                 stmt.executeUpdate(sql);
                 stmt.close();
+                
             } catch (SQLException e) {
                 System.err.println( e.getClass().getName() + ": " + e.getMessage() );
                 System.exit(0);
         }
     }
         
-        private void criarTabelaPedidos() {
-            Statement stmt = null;
-            conexaoMySQL conn = conexaoMySQL.getConexao();
-            Connection conexao = conn.getConexaoMySQL();
+    private void criarTabelaPedidos() {
+             
+        Statement stmt = null;
+        // Cria uma instancia para a criacao do Banco de dados
+        conexaoMySQL conn = conexaoMySQL.getConexao();
+        // Cria conexao com o banco
+        Connection conexao = conn.getConexaoMySQL();
+        
         try {
             stmt = conexao.createStatement();
             String sql = "CREATE TABLE PEDIDOS " +
-                        "(ID                 CHAR    PRIMARY KEY NOT NULL," +
-                        " IDQUARTO           CHAR    FOREIGN KEY NOT NULL, " + 
-                        " SERVICO            TEXT    NOT NULL, " +
-                        " OBSERVACAO         TEXT    NOT NULL )"; 
+                        "(ID            INTEGER    NOT NULL PRIMARY KEY AUTOINCREMENT," +
+                        " IDQUARTO      INTEGER    KEY NOT NULL, " + 
+                        " SERVICO       TEXT    NOT NULL, " +
+                        " OBSERVACAO    TEXT    NOT NULL)";
             stmt.executeUpdate(sql);
             stmt.close();
         } catch (SQLException e) {
             System.err.println( e.getClass().getName() + ": " + e.getMessage() );
             System.exit(0);
         }
-    }
-    
+    }    
 }
 
 

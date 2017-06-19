@@ -83,13 +83,14 @@ public class insercaoBanco {
             // Cria conexao com o banco
             Connection c = conn.getConexaoMySQL();
 
-            String sql = "INSERT INTO PEDIDOS (IDQUARTO, SERVICO, OBSERVACOES) "
-                    + "VALUES (?,?,?);";
+            String sql = "INSERT INTO PEDIDOS (ID, IDQUARTO, SERVICO, OBSERVACAO) "
+                    + "VALUES (?,?,?,?);";
 
             try (PreparedStatement stmt = c.prepareStatement(sql)) {
-                stmt.setString(1,String.valueOf(pedido.getIdQuarto()));
-                stmt.setString(2, pedido.getServico());
-                stmt.setString(3, pedido.getOBSERVACOES());
+                stmt.setString(1, null);
+                stmt.setInt(2, pedido.getIdQuarto());
+                stmt.setString(3, pedido.getServico());
+                stmt.setString(4, pedido.getOBSERVACOES());
                 stmt.execute();
             }
 

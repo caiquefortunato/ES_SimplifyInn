@@ -13,10 +13,16 @@ public class Pedido {
     
     private int idQuarto;
     private String servico;
-    private String OBSERVACOES;    
+    private String observacoes;    
     
-    private Pedido(){
+    public Pedido(){
         
+    }
+
+    public Pedido(int idQuarto, String servico, String OBSERVACOES) {
+        this.idQuarto = idQuarto;
+        this.servico = servico;
+        this.observacoes = OBSERVACOES;
     }
 
     /**
@@ -49,16 +55,16 @@ public class Pedido {
     }
 
     /**
-     * @return the OBSERVACOES
+     * @return the observacoes
      */
     public String getOBSERVACOES() {
-        return OBSERVACOES;
+        return observacoes;
     }
 
     /**
-     * @param OBSERVACOES the OBSERVACOES to set
+     * @param OBSERVACOES the observacoes to set
      */
     public void setOBSERVACOES(String OBSERVACOES) {
-        this.OBSERVACOES = OBSERVACOES;
+        this.observacoes = OBSERVACOES;
     }    
 }
