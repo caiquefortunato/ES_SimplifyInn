@@ -18,8 +18,7 @@ public class telaCadastro {
     }
 
     public telaCadastro(usuario user) {
-        insercaoBanco insere = new insercaoBanco();
-        insere.inserirUsuario(user);
+        insercaoBanco.inserirUsuario(user);
     }
     
     public void VerificaDisponibilidade(String login) {
