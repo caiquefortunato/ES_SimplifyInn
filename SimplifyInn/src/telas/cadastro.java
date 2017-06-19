@@ -477,11 +477,12 @@ public class cadastro extends javax.swing.JFrame {
             
             telaCadastro cadastro = new telaCadastro(user);
             
-
+            JOptionPane.showMessageDialog(null, "Cadastro realizado com sucesso!");
+            
             // Passa para a tela de login
             java.awt.EventQueue.invokeLater(new Runnable() {
                 public void run() {
-                    new TelaInicial().setVisible(true);
+                    new inicio().setVisible(true);
                 }
             });
             

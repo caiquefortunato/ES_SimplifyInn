@@ -375,7 +375,7 @@ public class TelaInicial extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(() -> {
             new TelaReserva().setVisible(true);
         });
-        this.dispose(); 
+        this.dispose();
     }//GEN-LAST:event_botao_crsActionPerformed
 
     private void botao_maisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botao_maisActionPerformed
