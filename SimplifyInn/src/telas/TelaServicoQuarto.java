@@ -246,7 +246,7 @@ public class TelaServicoQuarto extends javax.swing.JFrame {
                     + "não podem ficar em branco.");
         }
         else {
-            Pedido pedido = new Pedido(Integer.parseInt(campoQuarto.getText()), campoQuarto.getText(), campoObservacao.getText());
+            Pedido pedido = new Pedido(Integer.parseInt(campoQuarto.getText()), campoServico.getText(), campoObservacao.getText());
             telaServico acaoTela = new telaServico();
             acaoTela.preencherDados(pedido);
             

@@ -31,7 +31,9 @@ public class conexaoMySQL {
         
         try {
             Class.forName("org.sqlite.JDBC");
-            connection = DriverManager.getConnection("jdbc:sqlite:test.db");
+            connection = DriverManager.getConnection("C:\\Users\\Philipe\\Documents\\NetBeansProjects\\ES_SimplifyInn\\SimplifyInn\\test.db");
+            //connection = DriverManager.getConnection("jdbc:sqlite:test.db");
+
             
             //Testa a conexao  
             if (connection != null) {
@@ -43,7 +45,7 @@ public class conexaoMySQL {
             return connection;
         } catch (ClassNotFoundException e) {
             System.err.println( e.getClass().getName() + ": " + e.getMessage() );
-            JOptionPane.showMessageDialog(null, "O driver expecificado nao foi encontrado.");
+            JOptionPane.showMessageDialog(null, "O driver especificado nao foi encontrado.");
             System.exit(0);
             return null;
         } catch (SQLException e) {
