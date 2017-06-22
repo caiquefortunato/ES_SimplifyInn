@@ -373,7 +373,7 @@ public class TelaInicial extends javax.swing.JFrame {
 
     private void botao_crsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botao_crsActionPerformed
         java.awt.EventQueue.invokeLater(() -> {
-            new TelaReserva().setVisible(true);
+            new TelaCRS().setVisible(true);
         });
         this.dispose();
     }//GEN-LAST:event_botao_crsActionPerformed

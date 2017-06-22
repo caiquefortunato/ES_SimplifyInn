@@ -31,8 +31,8 @@ public class conexaoMySQL {
         
         try {
             Class.forName("org.sqlite.JDBC");
-            connection = DriverManager.getConnection("C:\\Users\\Philipe\\Documents\\NetBeansProjects\\ES_SimplifyInn\\SimplifyInn\\test.db");
-            //connection = DriverManager.getConnection("jdbc:sqlite:test.db");
+            
+            connection = DriverManager.getConnection("jdbc:sqlite:test.db");
 
             
             //Testa a conexao  
