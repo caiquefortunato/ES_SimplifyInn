@@ -59,8 +59,6 @@ public class TelaCRS extends javax.swing.JFrame {
         campoObs = new javax.swing.JTextField();
         jLabel12 = new javax.swing.JLabel();
         campoNumQuarto = new javax.swing.JTextField();
-        jLabel13 = new javax.swing.JLabel();
-        campoCodReserva = new javax.swing.JTextField();
         jPanel4 = new javax.swing.JPanel();
         jLabel14 = new javax.swing.JLabel();
         campoCheckin = new javax.swing.JTextField();
@@ -135,6 +133,17 @@ public class TelaCRS extends javax.swing.JFrame {
 
         jLabel5.setText("Número");
 
+        campoNumero.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                campoNumeroFocusLost(evt);
+            }
+        });
+        campoNumero.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                campoNumeroPropertyChange(evt);
+            }
+        });
+
         jLabel6.setText("Nome:");
 
         campoNome.addActionListener(new java.awt.event.ActionListener() {
@@ -155,6 +164,11 @@ public class TelaCRS extends javax.swing.JFrame {
 
         jLabel9.setText("Telefone:");
 
+        campoTelefone.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                campoTelefoneFocusLost(evt);
+            }
+        });
         campoTelefone.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 campoTelefoneActionPerformed(evt);
@@ -226,11 +240,21 @@ public class TelaCRS extends javax.swing.JFrame {
 
         jLabel10.setText("Número de hóspedes:");
 
+        campoNumHospedes.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                campoNumHospedesFocusLost(evt);
+            }
+        });
+
         jLabel11.setText("Observações:");
 
         jLabel12.setText("Número do quarto:");
 
-        jLabel13.setText("Código da reserva:");
+        campoNumQuarto.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                campoNumQuartoFocusLost(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -238,19 +262,17 @@ public class TelaCRS extends javax.swing.JFrame {
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabel10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel10)
                     .addComponent(jLabel11)
-                    .addComponent(jLabel12)
-                    .addComponent(jLabel13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jLabel12))
                 .addGap(27, 27, 27)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(campoObs)
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(campoNumHospedes, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(campoNumQuarto, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(campoCodReserva, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(campoNumQuarto, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(0, 60, Short.MAX_VALUE)))
                 .addContainerGap())
         );
@@ -269,11 +291,7 @@ public class TelaCRS extends javax.swing.JFrame {
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel12)
                     .addComponent(campoNumQuarto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(campoCodReserva, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel13))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(39, Short.MAX_VALUE))
         );
 
         jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Mais informações:", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Lucida Console", 0, 14))); // NOI18N
@@ -414,7 +432,7 @@ public class TelaCRS extends javax.swing.JFrame {
         }else{
             Reserva reserva = new Reserva(campoId.getSelectedItem().toString(),
                 Integer.parseInt(campoNumero.getText()), campoNome.getText(),
-                campoEmail.getText(), Integer.parseInt(campoTelefone.getText()),
+                campoEmail.getText(), campoTelefone.getText(),
                 campoDataNasc.getText(), campoCheckin.getText(), campoCheckout.getText(),
                 Integer.parseInt(campoNumHospedes.getText()),campoObs.getText(),
                 Integer.parseInt(campoNumQuarto.getText()), 0);
@@ -465,6 +483,65 @@ public class TelaCRS extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_campoCheckoutActionPerformed
 
+    private void campoNumeroPropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_campoNumeroPropertyChange
+
+    }//GEN-LAST:event_campoNumeroPropertyChange
+
+    private void campoNumeroFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_campoNumeroFocusLost
+        try {
+            int num = Integer.parseInt(campoNumero.getText());
+            if((num > 9999) || (num < 1000)){
+                JOptionPane.showMessageDialog(null, "Favor inserir um número inteiro com 4 dígitos");
+                campoNumero.setText("");
+                campoNumero.requestFocus();
+            }
+           
+        }
+        catch (NumberFormatException e) {
+            JOptionPane.showMessageDialog(null, "Favor inserir um número inteiro.");
+            campoNumero.setText("");
+            campoNumero.requestFocus();
+        }
+    }//GEN-LAST:event_campoNumeroFocusLost
+
+    private void campoTelefoneFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_campoTelefoneFocusLost
+
+    }//GEN-LAST:event_campoTelefoneFocusLost
+
+    private void campoNumHospedesFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_campoNumHospedesFocusLost
+         try {
+            int num = Integer.parseInt(campoNumHospedes.getText());
+            if((num > 9) || (num < 1)){
+                JOptionPane.showMessageDialog(null, "Favor inserir um número de 1 a 9");
+                campoNumHospedes.setText("");
+                campoNumHospedes.requestFocus();
+            }
+           
+        }
+        catch (NumberFormatException e) {
+            JOptionPane.showMessageDialog(null, "Favor inserir um número inteiro.");
+            campoNumHospedes.setText("");
+            campoNumHospedes.requestFocus();
+        }
+    }//GEN-LAST:event_campoNumHospedesFocusLost
+
+    private void campoNumQuartoFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_campoNumQuartoFocusLost
+         try {
+            int num = Integer.parseInt(campoNumQuarto.getText());
+            if((num > 300) || (num < 100)){
+                JOptionPane.showMessageDialog(null, "Favor inserir um número de 100 a 300");
+                campoNumQuarto.setText("");
+                campoNumQuarto.requestFocus();
+            }
+           
+        }
+        catch (NumberFormatException e) {
+            JOptionPane.showMessageDialog(null, "Favor inserir um número inteiro.");
+            campoNumQuarto.setText("");
+            campoNumQuarto.requestFocus();
+        }
+    }//GEN-LAST:event_campoNumQuartoFocusLost
+
     /**
      * @param args the command line arguments
      */
@@ -505,7 +582,6 @@ public class TelaCRS extends javax.swing.JFrame {
     private javax.swing.JButton botaoVoltar;
     private javax.swing.JTextField campoCheckin;
     private javax.swing.JTextField campoCheckout;
-    private javax.swing.JTextField campoCodReserva;
     private javax.swing.JTextField campoDataNasc;
     private javax.swing.JTextField campoEmail;
     private javax.swing.JComboBox<String> campoId;
@@ -520,7 +596,6 @@ public class TelaCRS extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel2;

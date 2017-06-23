@@ -6,7 +6,7 @@ public class Reserva {
     private int numero_identificacao;
     private String nome;
     private String email;
-    private int telefone;
+    private String telefone;
     private String data_nascimento; 
     private String data_checkin;
     private String data_checkout;
@@ -20,7 +20,7 @@ public class Reserva {
     }
 
     public Reserva(String identificacao, int numero_identificacao, String nome, 
-            String email, int telefone, String data_nascimento, 
+            String email, String telefone, String data_nascimento, 
             String data_checkin, String data_checkout, int num_hospedes,
             String observacoes, int num_quarto, int cod_reserva) {
         this.identificacao = identificacao;
@@ -77,11 +77,11 @@ public class Reserva {
         this.email = email;
     }
 
-    public int getTelefone() {
+    public String getTelefone() {
         return telefone;
     }
 
-    public void setTelefone(int telefone) {
+    public void setTelefone(String telefone) {
         this.telefone = telefone;
     }
 

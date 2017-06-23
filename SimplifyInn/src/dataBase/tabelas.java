@@ -55,7 +55,7 @@ public class tabelas {
                             " NUM           INTEGER     NOT NULL, " + 
                             " NOME          TEXT        NOT NULL, " +
                             " EMAIL         TEXT        NOT NULL, " +
-                            " TELEFONE      INTEGER     NOT NULL, " +
+                            " TELEFONE      TEXT        NOT NULL, " +
                             " DATANASC      DATE        NOT NULL, " +
                             " CHECKIN       DATE        NOT NULL,  "  +
                             " CHECKOUT      DATE        NOT NULL,  "  +

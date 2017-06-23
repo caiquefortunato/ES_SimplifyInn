@@ -363,7 +363,7 @@ public class TelaReserva extends javax.swing.JFrame {
         }
         else{
             Reserva reserva = new Reserva(campoId.getSelectedItem().toString(), Integer.parseInt(campoNumero.getText()), campoNome.getText(),
-                                          campoEmail.getText(), Integer.parseInt(campoTelefone.getText()),
+                                          campoEmail.getText(), campoTelefone.getText(),
                                           campoDataNasc.getText(), campoCheckin.getText(), campoCheckout.getText(),
                                           Integer.parseInt(campoNumHospedes.getText()),campoObs.getText(),
                                           Integer.parseInt(campoNumQuarto.getText()), 0);                  

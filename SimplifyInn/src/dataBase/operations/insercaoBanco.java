@@ -59,7 +59,7 @@ public class insercaoBanco {
                 stmt.setInt(3, res.getNumero_identificacao());
                 stmt.setString(4, res.getEmail());
                 stmt.setString(5, res.getEmail());
-                stmt.setInt(6, res.getTelefone());
+                stmt.setString(6, res.getTelefone());
                 stmt.setString(7, res.getData_nascimento());
                 stmt.setString(8, res.getData_checkin());
                 stmt.setString(9, res.getData_checkout());

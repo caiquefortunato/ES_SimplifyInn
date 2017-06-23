@@ -3,7 +3,7 @@
  */
 package simplifyinn;
 
-import telas.inicio;
+import telas.TelaCRS;
 
 /**
  * Primeira Sprint. 
@@ -14,7 +14,7 @@ public class SimplifyInn {
     public static void main(String[] args) throws ClassNotFoundException {
         
         java.awt.EventQueue.invokeLater(() -> {
-            new inicio().setVisible(true);
+            new TelaCRS().setVisible(true);
         });
     }
     
